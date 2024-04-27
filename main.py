@@ -3,18 +3,14 @@ import mysql.connector
 
 mydb = mysql.connector.connect(
     host="localhost",
-    user="testeroot",
-    password="teste12345",
-    database="teste_db"
+    user="root",
+    password="1234",
+    database="apirest"
 )
 
 cursor = mydb.cursor()
 
-app = Flask(__name__)
-app.json.sort_keys = False
-
-@app.route("/personagens", methods=["GET"])
-def personagens():
+def buscar_personagens():
     comando = "SELECT * FROM hunter_db"
     cursor.execute(comando)
     personagens = cursor.fetchall()
@@ -32,6 +28,14 @@ def personagens():
                 "nen": personagem[7]
             }
         )
+    return lista_personagens
+
+app = Flask(__name__)
+app.json.sort_keys = False
+
+@app.route("/personagens", methods=["GET"])
+def personagens():
+    lista_personagens = buscar_personagens()
     return jsonify(
         mensagem="Lista de personagens",
         dados=lista_personagens
@@ -39,23 +43,7 @@ def personagens():
 
 @app.route("/personagens/<int:id>", methods=["GET"])
 def personagem(id):
-    comando = "SELECT * FROM hunter_db"
-    cursor.execute(comando)
-    personagens = cursor.fetchall()
-    lista_personagens = list()
-    for personagem in personagens:
-        lista_personagens.append(
-            {
-                "id": personagem[0],
-                "nome": personagem[1],
-                "idade": personagem[2],
-                "sexo": personagem[3],
-                "altura": personagem[4],
-                "peso": personagem[5],
-                "aniversário": personagem[6],
-                "nen": personagem[7]
-            }
-        )
+    lista_personagens = buscar_personagens()
     for personagem in lista_personagens:
         if personagem.get("id") == id:
             return jsonify(
