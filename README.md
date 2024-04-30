@@ -19,8 +19,8 @@
 <h2>Acesso aos endpoints</h2>
 <ul>
   <li>Listar todos os personagens: Método = [GET] | Endpoint = [/personagens]</li>
-  <li>Buscar um personagem por ID: Método = [GET] | Endpoint = [/personagens/<id>]</li>
+  <li>Buscar um personagem por ID: Método = [GET] | Endpoint = [/personagens/id]</li>
   <li>Adicionar um novo personagem: Método = [POST] | Endpoint = [/personagens]</li>
-  <li>Atualizar um personagem existente: Método = [PUT] | Endpoint = [/personagens/<id>]</li>
-  <li>Excluir um personagem: Método = [DELETE] | Endpoint = [/personagens/<id>]</li>
+  <li>Atualizar um personagem existente: Método = [PUT] | Endpoint = [/personagens/id]</li>
+  <li>Excluir um personagem: Método = [DELETE] | Endpoint = [/personagens/id]</li>
 </ul>
