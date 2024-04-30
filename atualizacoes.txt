@@ -1,3 +1,7 @@
 -----Atualização v1.1-----
 
 Adicionada a função "buscar_personagem()" para resolver o problema de repetição de código nos endpoints "/personagens" e "/personagens/id".
+
+-----Atualização v1.2-----
+
+Adicionado tratamento de erro e exceção e adicionado tabela MySQL junto com os demais arquivos.
