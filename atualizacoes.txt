@@ -5,3 +5,7 @@ Adicionada a função "buscar_personagem()" para resolver o problema de repetiç
 -----Atualização v1.2-----
 
 Adicionado tratamento de erro e exceção e adicionado tabela MySQL junto com os demais arquivos.
+
+-----Atualização v2.0-----
+
+Adicionado placeholders para evitar injeção no SQL e código agora em POO.
