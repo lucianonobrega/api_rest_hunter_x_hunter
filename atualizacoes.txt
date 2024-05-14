@@ -9,3 +9,7 @@ Adicionado tratamento de erro e exceção e adicionado tabela MySQL junto com os
 -----Atualização v2.0-----
 
 Adicionado placeholders para evitar injeção no SQL e código agora em POO.
+
+-----Atualização v2.1-----
+
+Separação do bloco de código de conexão com o banco de dados (modularização) melhorando um pouco a organização e entendimento do projeto, além de facilitar a manutenção caso necessário.

@@ -1,16 +1,11 @@
 from flask import Flask, jsonify, request
+from mysql_connector import MyDB
 import mysql.connector
 
-class ApiRest():
+class ApiRest(MyDB):
     def __init__(self):
         try:
-            self.mydb = mysql.connector.connect(
-                host="localhost",
-                user="root",
-                password="1234",
-                database="apirest"
-            )
-            self.cursor = self.mydb.cursor()
+            super().__init__()
             self.app = Flask(__name__)
             self.app.json.sort_keys = False
         except mysql.connector.Error as E:
