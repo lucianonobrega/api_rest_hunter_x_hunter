@@ -1,6 +1,6 @@
 <h1 align="center">API REST de Personagens - Hunter DB</h1>
 <h2>Descrição</h2>
-<p>Esta é uma API REST construída com Flask para manipulação de dados de personagens em um banco de dados MySQL. Ele fornece endpoints para listar todos os personagens, buscar um personagem por ID, adicionar, atualizar e excluir personagens.</p>
+<p>Esta é uma API REST básica construída com Flask para manipulação de dados de personagens em um banco de dados MySQL. Ele fornece endpoints para listar todos os personagens, buscar um personagem por ID, adicionar, atualizar e excluir personagens.</p>
 <h2>Pré-requisitos</h2>
 <ul>
   <li>Python 3.x</li>
